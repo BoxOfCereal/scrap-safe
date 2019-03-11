@@ -1,11 +1,14 @@
 $nav-item-padding: 20px 40px;
 $hover-underbar-height: 6px;
+$scale: scaleY(3.5);
+$underbar-color: rgb(0, 200, 200);
 
 .nav-wrapper {
   z-index: 100;
   min-width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: whitesmoke;
 
   .company-name {
     padding: $nav-item-padding;
@@ -20,7 +23,7 @@ $hover-underbar-height: 6px;
     height: 2px;
     background-color: black;
     left: 10px;
-    top: 60px;
+    top: 54px;
     position: absolute;
     transition: 0.5s ease;
   }
@@ -64,44 +67,44 @@ $hover-underbar-height: 6px;
       &:nth-of-type(1):hover ~ .underbar {
         left: 0;
         width: 63px;
-        height: $hover-underbar-height;
-        background: rgba(100, 100, 200, 1);
+        transform: $scale;
+        background: $underbar-color;
       }
       &:nth-of-type(1):active ~ .underbar {
         left: 0;
         width: 63px;
-        height: $hover-underbar-height;
-        background: rgba(100, 100, 200, 1);
+        transform: $scale;
+        background: $underbar-color;
       }
       &:nth-of-type(2):hover ~ .underbar {
         left: 62px;
         width: 76px;
-        height: $hover-underbar-height;
-        background: rgba(100, 100, 200, 1);
+        transform: $scale;
+        background: $underbar-color;
       }
       &:nth-of-type(3):hover ~ .underbar {
         left: 138px;
         width: 211px;
-        height: $hover-underbar-height;
-        background: rgba(100, 100, 200, 1);
+        transform: $scale;
+        background: $underbar-color;
       }
       &:nth-of-type(4):hover ~ .underbar {
         left: 349px;
         width: 125px;
-        height: $hover-underbar-height;
-        background: rgba(100, 100, 200, 1);
+        transform: $scale;
+        background: $underbar-color;
       }
       &:nth-of-type(5):hover ~ .underbar {
         left: 474px;
         width: 92px;
-        height: $hover-underbar-height;
-        background: rgba(100, 100, 200, 1);
+        transform: $scale;
+        background: $underbar-color;
       }
       &:nth-of-type(6):hover ~ .underbar {
         width: 96px;
         left: 570px;
-        height: $hover-underbar-height;
-        background: rgba(100, 100, 200, 1);
+        transform: $scale;
+        background: $underbar-color;
       }
     }
   }

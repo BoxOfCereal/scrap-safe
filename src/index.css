@@ -142,3 +142,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #006069;
+}
