@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.scss";
-import { NavBar, Carousel } from "./components/index";
+import { NavBar, Carousel, ServicesPanel } from "./components/index";
 
 class App extends Component {
   render() {
@@ -8,6 +8,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Carousel />
+        <ServicesPanel />
       </div>
     );
   }
