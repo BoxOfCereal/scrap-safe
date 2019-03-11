@@ -2,6 +2,7 @@ $nav-item-padding: 20px 40px;
 $hover-underbar-height: 6px;
 
 .nav-wrapper {
+  z-index: 100;
   min-width: 100%;
   display: flex;
   justify-content: space-between;
@@ -51,6 +52,9 @@ $hover-underbar-height: 6px;
   ul {
     display: flex;
     position: relative;
+  }
+  .underbar {
+    z-index: 100;
   }
   li {
     padding: 20px 10px;
