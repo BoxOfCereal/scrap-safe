@@ -1,22 +1,22 @@
 import React from "react";
 import "./ServicesPanel.scss";
 
+import { FaRecycle } from "react-icons/fa";
+import ServiceCardsWrapper from "./ServiceCardsWrapper";
+
 const ServicesPanel = () => {
   return (
     <section className="services-wrapper">
-      <div className="title">
+      <div className="services-title">
         <div>
-          <p>iconr</p>
+          <p className="leaf-icon">
+            <FaRecycle />
+          </p>
           <h2>Our Services</h2>
           <p>What We Do</p>
         </div>
       </div>
-      <div className="service-cards-wrapper">
-        <div className="service-card" />
-        <div className="service-card" />
-        <div className="service-card" />
-        <div className="service-card" />
-      </div>
+      <ServiceCardsWrapper />
     </section>
   );
 };
