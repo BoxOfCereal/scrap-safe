@@ -6,8 +6,14 @@ import { FaRecycle } from "react-icons/fa";
 const ServiceCard = ({ icon, title, text }) => {
   return (
     <div className="service-card">
-      <div className="service-card-icon">
-        <IconContext.Provider value={{ color: "rgb(46,205,113)", size: "3em" }}>
+      <div className="service-card-icon-wrapper">
+        <IconContext.Provider
+          value={{
+            color: "rgb(46,205,113)",
+            size: "3em",
+            className: "service-card-icon"
+          }}
+        >
           <FaRecycle />
         </IconContext.Provider>
       </div>
