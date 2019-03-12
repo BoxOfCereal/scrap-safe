@@ -1,0 +1,51 @@
+$nav-item-padding: 20px 40px;
+
+.nav-wrapper {
+  z-index: 100;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+
+  .company-name {
+    padding: $nav-item-padding;
+  }
+
+  .nav-bar {
+    padding-right: 40px;
+  }
+
+  .underbar {
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    left: 10px;
+    top: 54px;
+    position: absolute;
+    transition: 0.5s ease;
+  }
+  .home {
+    width: 62px;
+    left: 0px;
+  }
+  .services {
+    width: 76px;
+    left: 62px;
+  }
+  .enviro {
+    width: 211px;
+    left: 138px;
+  }
+  .asset {
+    width: 125px;
+    left: 349px;
+  }
+  .case {
+    width: 92px;
+    left: 474px;
+  }
+  .contact {
+    width: 96px;
+    left: 570px;
+  }
+}
