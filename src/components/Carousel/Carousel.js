@@ -12,10 +12,31 @@ import meter from "../../imgs/carousel/meter.jpg";
 const Carousel = () => {
   const [imgIndex, setImageIndex] = useState(0);
   const imgs = [
-    { url: electricMeter, alt: "electric-meter" },
-    { url: gasMeter, alt: "gas-meter" },
-    { url: industry, alt: "industry" },
-    { url: meter, alt: "meter" }
+    {
+      url: electricMeter,
+      alt: "electric-meter",
+      title: "Asset Recovery",
+      text:
+        "ScrapSafe provides an environmentally responsible and economic process for recycling retired meters."
+    },
+    {
+      url: gasMeter,
+      alt: "gas-meter",
+      title: "Leave the dirty work to us.",
+      text: `Ship all your dirty meters and we'll document our findings and make sure every meter with hazardous waste is accounted for.`
+    },
+    {
+      url: industry,
+      alt: "industry",
+      title: "founded in 2010 by GE meter division executives",
+      text: `Over 60 Years Combined Experience. `
+    },
+    {
+      url: meter,
+      alt: "meter",
+      title: `we speak your language`,
+      text: `ScrapSafe, Inc. is a company run by meter people for meter people.`
+    }
   ];
   const nextSlide = () => {
     setImageIndex((imgIndex + 1) % imgs.length);
