@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import "./Carousel.scss";
 import ImageSlide from "./ImageSlide.js";
@@ -40,10 +40,34 @@ const Carousel = () => {
   ];
   const nextSlide = () => {
     setImageIndex((imgIndex + 1) % imgs.length);
+    console.log(imgIndex + 1);
+    console.log((imgIndex + 1) % imgs.length);
   };
   const prevSlide = () => {
     setImageIndex((imgIndex - 1 + imgs.length) % imgs.length);
   };
+
+  useInterval(nextSlide, 5000);
+
+  function useInterval(callback, delay) {
+    const savedCallback = useRef();
+
+    // Remember the latest callback.
+    useEffect(() => {
+      savedCallback.current = callback;
+    }, [callback]);
+
+    // Set up the interval.
+    useEffect(() => {
+      function tick() {
+        savedCallback.current();
+      }
+      if (delay !== null) {
+        let id = setInterval(tick, delay);
+        return () => clearInterval(id);
+      }
+    }, [delay]);
+  }
 
   return (
     <div className="carousel-wrapper">
