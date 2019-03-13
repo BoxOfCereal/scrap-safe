@@ -4,7 +4,8 @@ import {
   NavBarWrapper,
   Carousel,
   ServicesPanel,
-  Panel
+  Panel,
+  Button
 } from "./components/index";
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
             economically of retired electromechanical watt hour, water and gas
             meters.
           </p>
-          <button>Read More</button>
+          <Button primary>Read More</Button>
         </Panel>
         <ServicesPanel />
       </div>
