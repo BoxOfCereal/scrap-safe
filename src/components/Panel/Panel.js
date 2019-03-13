@@ -4,7 +4,7 @@ import { FaRecycle } from "react-icons/fa";
 import PanelTitle from "./PanelTitle";
 import "./Panel.scss";
 
-const DivPanel = styled.div`
+const SectionPanel = styled.section`
   min-width: 100%;
   height: ${props => (props.height ? props.height : "630")}px;
   background-color: rgb(251, 251, 251);
@@ -19,15 +19,25 @@ const DivPanel = styled.div`
     width: 75%;
     margin: 0 auto;
   }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    & > * {
+      margin-bottom: 20px;
+    }
+  }
 `;
 
 //refactor into Panel Component and Extend them
 const Panel = ({ icon, title, subTitle, children, height }) => {
   return (
-    <DivPanel height={height}>
+    <SectionPanel height={height}>
       <PanelTitle Icon={FaRecycle} title={"ScrapSafe"} subTitle="About Us" />
-      {children}
-    </DivPanel>
+      <div>{children}</div>
+    </SectionPanel>
   );
 };
 
