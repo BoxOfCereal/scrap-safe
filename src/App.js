@@ -13,7 +13,15 @@ class App extends Component {
       <div className="App">
         <NavBarWrapper />
         <Carousel />
-        <Panel />
+        <Panel height={400}>
+          <p>
+            ScrapSafe, Inc., was founded in 2010 by retired GE meter division
+            executives and offers a unique process to dispose safely and
+            economically of retired electromechanical watt hour, water and gas
+            meters.
+          </p>
+          <button>Read More</button>
+        </Panel>
         <ServicesPanel />
       </div>
     );

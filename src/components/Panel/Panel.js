@@ -13,13 +13,19 @@ const DivPanel = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background: lightgray;
+
+  p {
+    line-height: 1.8rem;
+    width: 75%;
+    margin: 0 auto;
+  }
 `;
 
 //refactor into Panel Component and Extend them
-const Panel = ({ icon, title, text, children }) => {
+const Panel = ({ icon, title, subTitle, children, height }) => {
   return (
-    <DivPanel>
-      <PanelTitle Icon={FaRecycle} title="ScrapSafe" subTitle="About Us" />
+    <DivPanel height={height}>
+      <PanelTitle Icon={FaRecycle} title={"ScrapSafe"} subTitle="About Us" />
       {children}
     </DivPanel>
   );

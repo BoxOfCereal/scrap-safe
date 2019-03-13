@@ -17,7 +17,7 @@ const PanelTitle = ({ Icon, title, subTitle }) => {
         </IconContext.Provider>
       </div>
       <h2 className="panel-header">{title}</h2>
-      <p className="panel-sub-header">{subTitle}</p>
+      <h3 className="panel-sub-header">{subTitle}</h3>
     </div>
   );
 };
