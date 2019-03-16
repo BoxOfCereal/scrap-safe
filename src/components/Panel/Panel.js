@@ -35,7 +35,7 @@ const SectionPanel = styled.section`
 const Panel = ({ icon, title, subTitle, children, height }) => {
   return (
     <SectionPanel height={height}>
-      <PanelTitle Icon={FaRecycle} title={"ScrapSafe"} subTitle="About Us" />
+      <PanelTitle Icon={FaRecycle} title={title} subTitle={subTitle} />
       <div>{children}</div>
     </SectionPanel>
   );
