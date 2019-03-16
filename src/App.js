@@ -6,6 +6,7 @@ import {
   ServicesPanel,
   Panel,
   ImagePanel,
+  Footer,
   Button
 } from "./components/index";
 import { FaRecycle } from "react-icons/fa";
@@ -33,6 +34,7 @@ class App extends Component {
             "We Always Strive To Produce New Ideas To Help Us In Our Cycling Process"
           }
         />
+        <Footer />
       </div>
     );
   }
