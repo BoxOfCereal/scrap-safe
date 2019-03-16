@@ -1,9 +1,7 @@
 .services-wrapper {
   min-width: 100%;
-  height: 630px;
   background-color: rgb(251, 251, 251);
-  padding: 30px 100px;
-  padding-bottom: 95px;
+  padding: 50px 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -11,6 +9,7 @@
 .services-title {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
   .leaf-icon {
     margin: 10px 0px;
   }

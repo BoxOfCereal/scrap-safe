@@ -12,7 +12,7 @@ const SectionPanel = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: lightgray;
+  background: snow;
 
   p {
     line-height: 1.8rem;
