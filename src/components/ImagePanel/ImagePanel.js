@@ -5,8 +5,8 @@ import "./ImagePanel.scss";
 
 //refactor into Panel Component and Extend them
 const ImagePanel = ({ Icon, title, flavorText, children, height }) => {
-  return (
-    <div className="image-panel">
+    return (
+        <div className="image-panel">
       <div className="image-panel-overlay">
         <div className="image-panel-icon">
           <IconContext.Provider
@@ -26,7 +26,7 @@ const ImagePanel = ({ Icon, title, flavorText, children, height }) => {
         <Button primary>Learn More</Button>
       </div>
     </div>
-  );
+    );
 };
 
 export default ImagePanel;
