@@ -2,6 +2,10 @@ $hover-underline-height: 6px;
 $scale: scaleY(3.5);
 $underline-color: rgb(0, 200, 200);
 
+.nav-bar {
+  position: relative;
+}
+
 ul {
   display: flex;
   align-items: center;

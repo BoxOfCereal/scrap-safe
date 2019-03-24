@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.scss";
 import useMediaQuery from "../../CustomHooks/useMediaQuery";
-import { MenuIcon } from "../index";
+import { MobileMenu } from "../index";
 
 import styled from "styled-components";
 
@@ -73,7 +73,9 @@ const NavBar = () => {
           <hr className="underline" />
         </StyledUl>
       ) : (
-        <MenuIcon />
+        <>
+          <MobileMenu />
+        </>
       )}
     </nav>
   );
