@@ -13,7 +13,9 @@
 	transition: 0.4s;
 }
 .change .bar1 {
+	// transform-origin: center center;
 	transform: rotate(-45deg) translate(-9px, 6px);
+	// transform: rotate(-45deg) translate(-14px);
 }
 
 .change .bar2 {
@@ -21,5 +23,7 @@
 }
 
 .change .bar3 {
-	transform: rotate(45deg) translate(-8px, -8px);
+	// transform-origin: center center;
+	transform: rotate(45deg) translate(-8px, -6px);
+	// transform: rotate(45deg) translate(-14px);
 }
