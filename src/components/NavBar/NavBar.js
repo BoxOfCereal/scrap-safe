@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.scss";
+import useMediaQuery from "../../CustomHooks/useMediaQuery";
+import { MenuIcon } from "../index";
 
 import styled from "styled-components";
 
@@ -52,44 +54,27 @@ const NavBar = () => {
     widths: [42, 56, 191, 105, 77, 76]
   });
   const navRef = React.createRef();
+  const isDesktop = useMediaQuery("(min-width: 880px)");
 
   useEffect(() => {
     console.log(navRef);
   });
 
-  // function scaleTable() {
-  //   let table = document.getElementById("test");
-  //   let windowWidth = window.innerWidth;
-  //   const breakPoint = 500;
-  //   if (breakPoint > windowWidth) {
-  //     let tableWidth = window
-  //       .getComputedStyle(table)
-  //       .getPropertyValue("width")
-  //       .replace("px", "");
-  //     const ratio = (windowWidth / tableWidth) * 0.95;
-  //     console.log(windowWidth, tableWidth, `scale(${ratio},${ratio})`);
-  //     table.style.transform = `scale(${ratio},${ratio})`;
-  //   } else {
-  //     table.style.transform = ``;
-  //   }
-  // }
-
-  // window.addEventListener("resize", () => {
-  //   scaleTable();
-  // });
-  // scaleTable();
-
   return (
     <nav ref={navRef} className="nav-bar">
-      <StyledUl {...liWidths} offest={10}>
-        <li>Home</li>
-        <li>Services</li>
-        <li>Environmental Stewardship</li>
-        <li>Asset Recovery</li>
-        <li>Case Study</li>
-        <li>Contact Us</li>
-        <hr className="underline" />
-      </StyledUl>
+      {isDesktop ? (
+        <StyledUl {...liWidths} offest={10}>
+          <li>Home</li>
+          <li>Services</li>
+          <li>Environmental Stewardship</li>
+          <li>Asset Recovery</li>
+          <li>Case Study</li>
+          <li>Contact Us</li>
+          <hr className="underline" />
+        </StyledUl>
+      ) : (
+        <MenuIcon />
+      )}
     </nav>
   );
 };
