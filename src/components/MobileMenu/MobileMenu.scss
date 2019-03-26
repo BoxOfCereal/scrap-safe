@@ -8,7 +8,7 @@
 	width: 100vw;
 	background: gray;
 	z-index: 3;
-	display: none;
+	// display: none;
 	transition: 0.4s;
 	&:hover {
 		cursor: pointer;
@@ -27,7 +27,7 @@
 	}
 }
 .display {
-	display: block;
+	// display: block;
 	height: 500px;
 	overflow: visible;
 }
