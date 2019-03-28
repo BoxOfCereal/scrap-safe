@@ -53,15 +53,11 @@ const NavBar = () => {
     margins: [0, 63, 139, 350, 475, 572],
     widths: [42, 56, 191, 105, 77, 76]
   });
-  const navRef = React.createRef();
+
   const isDesktop = useMediaQuery("(min-width: 880px)");
 
-  useEffect(() => {
-    console.log(navRef);
-  });
-
   return (
-    <nav ref={navRef} className="nav-bar">
+    <nav className="nav-bar">
       {isDesktop ? (
         <StyledUl {...liWidths} offest={10}>
           <li>Home</li>
