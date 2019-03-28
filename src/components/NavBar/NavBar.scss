@@ -4,14 +4,15 @@ $underline-color: rgb(0, 200, 200);
 
 .nav-bar {
   position: relative;
+
+  ul {
+    display: flex;
+    align-items: center;
+    position: relative;
+    // flex-wrap: wrap;
+  }
 }
 
-ul {
-  display: flex;
-  align-items: center;
-  position: relative;
-  // flex-wrap: wrap;
-}
 .underline {
   z-index: 100;
   // wrap hr to next line

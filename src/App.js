@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import "./App.scss";
-import { HomePage } from "./views/index";
+import { HomePage, Services } from "./views/index";
 import { NavBarWrapper, Footer } from "./components/index";
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
       <div className="App">
         <NavBarWrapper />
         <Route path="/" exact component={HomePage} />
+        <Route path="/services" exact component={Services} />
         <Footer />
       </div>
     );

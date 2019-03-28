@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.scss";
 import useMediaQuery from "../../CustomHooks/useMediaQuery";
 import { MobileMenu } from "../index";
@@ -7,7 +8,9 @@ import styled from "styled-components";
 
 const StyledUl = styled.ul`
   ${props => console.log(props)}
-  li {
+  a {
+    text-decoration: none;
+    color: black;
     padding: 20px 10px;
     transition: 0.5s ease;
     text-align: center;
@@ -45,6 +48,9 @@ const StyledUl = styled.ul`
         height: 4px;
       }
     }
+    &:visited {
+      color: black;
+    }
   }
 `;
 
@@ -60,12 +66,12 @@ const NavBar = () => {
     <nav className="nav-bar">
       {isDesktop ? (
         <StyledUl {...liWidths} offest={10}>
-          <li>Home</li>
-          <li>Services</li>
-          <li>Environmental Stewardship</li>
-          <li>Asset Recovery</li>
-          <li>Case Study</li>
-          <li>Contact Us</li>
+          <Link to="/">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/stewardship">Environmental Stewardship</Link>
+          <Link to="/asset-recovery">Asset Recovery</Link>
+          <Link to="/case-study">Case Study</Link>
+          <Link to="/contact-us">Contact Us</Link>
           <hr className="underline" />
         </StyledUl>
       ) : (
